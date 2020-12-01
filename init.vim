@@ -1,3 +1,5 @@
+"init.vim
+
 set nocompatible
 filetype off
 
@@ -27,3 +29,8 @@ set hlsearch
 set noerrorbells
 set expandtab
 set smartindent
+
+"vscode like tab completion
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
