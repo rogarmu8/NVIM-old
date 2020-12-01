@@ -15,6 +15,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -33,22 +38,7 @@ set noerrorbells
 set expandtab
 set smartindent
 
-"vscode like tab completion
-" <Tab>: completion
-inoremap <silent><expr> <Tab>
-    \ pumvisible() ? "\<C-N>" :
-    \ s:check_back_space() ? "\<Tab>" :
-    \ coc#refresh()
-" <S-Tab>: completion back
-inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-P>" : "\<C-H>"
-" <CR>: confirm completion, or insert <CR>
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1] =~ '\s'
-endfunction
-
+" ctrl-space to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
 nmap <silent> rn <Plug>(coc-rename)
