@@ -23,7 +23,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
-colorscheme gruvbox
 map <silent> <C-n> :NERDTreeFocus<CR>
 
 filetype plugin indent on
