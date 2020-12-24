@@ -1,6 +1,5 @@
 "init.vim
 
-
 set nocompatible
 filetype off
 
