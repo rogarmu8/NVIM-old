@@ -5,7 +5,6 @@ filetype off
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -20,6 +19,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ntk148v/vim-horizon'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -36,6 +37,17 @@ set hlsearch
 set noerrorbells
 set expandtab
 set smartindent
+
+set termguicolors
+
+colorscheme horizon
+
+" lightline
+let g:lightline = {}
+let g:lightline.colorscheme = 'horizon'
+
+" or this line
+let g:lightline = {'colorscheme' : 'horizon'}
 
 " ctrl-space to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
