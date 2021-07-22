@@ -17,8 +17,6 @@ Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'ntk148v/vim-horizon'
 Plug 'itchyny/lightline.vim'
 
@@ -43,11 +41,9 @@ set termguicolors
 colorscheme horizon
 
 " lightline
-let g:lightline = {}
-let g:lightline.colorscheme = 'horizon'
-
-" or this line
-let g:lightline = {'colorscheme' : 'horizon'}
+let g:lightline = {
+  \ 'colorscheme': 'one',
+  \ }
 
 " ctrl-space to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
