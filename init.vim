@@ -23,6 +23,9 @@ Plug 'itchyny/lightline.vim'
 call plug#end()
 
 map <silent> <C-n> :NERDTreeFocus<CR>
+"LATEX
+map W :w \| :! pdflatex %<CR><CR>
+map Z :! mupdf %<.pdf & <CR><CR>
 
 filetype plugin indent on
 syntax on
