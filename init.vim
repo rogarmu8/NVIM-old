@@ -24,8 +24,8 @@ call plug#end()
 
 map <silent> <C-n> :NERDTreeFocus<CR>
 "LATEX
-map W :w \| :! pdflatex %<CR><CR>
-map Z :! mupdf %<.pdf & <CR><CR>
+map <F2> :w \| :! pdflatex %<CR><CR>
+map <F3> :! mupdf %<.pdf & <CR><CR>
 
 filetype plugin indent on
 syntax on
